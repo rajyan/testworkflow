@@ -20,4 +20,12 @@ jobs:
         run: |
           docker buildx build . \
                 -t rajyan/test:latest \
-                --push \
+                --push
+
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: peterevans/dockerhub-description
+          readme-filepath: ./docs/test_doc.md
