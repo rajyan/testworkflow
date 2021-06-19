@@ -27,5 +27,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD_2 }}
-          repository: peterevans/dockerhub-description
+          repository: rajyan/test
           readme-filepath: ./docs/test_doc.md
