@@ -18,6 +18,6 @@ jobs:
 
       - name: Build images
         run: |
-          docker buildx build \
+          docker buildx build . \
+                -t rajyan/test:latest \
                 --push \
-                rajyan/test:latest
